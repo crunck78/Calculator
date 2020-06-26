@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>CALCULATOR</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <!--<script type="text/javascript" src="js/scripts.js"></script>-->
+    <script>
+	  
+	  function getSum(){
+	    var num1 = +document.getElementById("number1").value;
+		var num2 = +document.getElementById("number2").value;
+		var sum = num1 + num2;
+		alert(sum);
+	  }
+	 </script>
+  </head>
+  <body>
+	<div class="calculator">
+	  <h1>Calculate Sum</h1>
+	  <input id="number1" type="number"/>
+	  <input id="number2" title="number"/>
+	  <button onclick="getSum()">Get Sum</button>
+	</div>
+	  
+  </body>
+</html>

@@ -6,46 +6,21 @@
 	<title>CALCULATOR</title>
 	<link href="css/styles.css" rel="stylesheet">
 	<!--<script type="text/javascript" src="js/scripts.js"></script>-->
-	<script>
-
-		function getResult() {
-			var num1 = +document.getElementById("number1").value;
-			var operationSign = document.getElementById("operation-signs").value;
-			var num2 = +document.getElementById("number2").value;
-			var sum = calculate(num1, operationSign, num2);
-			var resultText = num1 +" "+ operationSign +" "+ num2 +" = "+ sum;
-			alert(resultText);
-		}
-
-		function calculate(num1, operationSign, num2){
-			switch(operationSign)
-			{
-				case "+":
-					return sum(num1, num2);
-				case "-":
-					return diff(num1, num2);
-				case "*":
-					return mult(num1, num2);
-				case "/":
-					return div(num1, num2);
-				default: 
-					return "UNEXPECTED ERROR";
-			}
-		}
-	</script>
+	<script src="js/scripts.js"></script>
 </head>
 
 <body>
 	<div class="calculator">
-		<h1>Calculate Sum</h1>
+		<h1>Calculator</h1>
 		<div class="input-content">
 			<div class="input-left input-cont-child">
-				<p class="text-margin-0" >Enter first number:</p>
-				<input id="number1" type="number" />
+				<!--<p class="text-margin-0" >Enter first number:</p>-->
+				<input id="number1" type="number" placeholder="Enter first number:"/>
 			</div>
 			<div class="select-signs input-cont-child">
-				<p class="text-margin-0" >Select operation sign:</p>
-				<select id="operation-signs" name="operation-signs">
+				<!--<p class="text-margin-0" >Select operation sign:</p>-->
+				<select id="operation-signs" name="operation-signs" required="">
+					<option value="" disabled="" selected="">Select operation sign:</option>
 					<option value="+">+</option>
 					<option value="-">-</option>
 					<option value="*">*</option>
@@ -53,13 +28,13 @@
 				</select>
 			</div>
 			<div class="input-right input-cont-child">
-				<p class="text-margin-0">Enter second number:</p>
-				<input id="number2" type="number" />
+				<!--<p class="text-margin-0">Enter second number:</p>-->
+				<input id="number2" type="number" placeholder="Enter second number:"/>
 			</div>
-			<div class="equal-sign input-cont-child">
+			<!--<div class="equal-sign input-cont-child">
 				=
-			</div>
-			<button onclick="getResult()">Get Result</button>
+			</div>-->
+			<button class="input-cont-child" onclick="getResult()">Get Result</button>
 		</div>
 
 	</div>

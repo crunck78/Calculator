@@ -1,6 +1,10 @@
 body{
   margin: 16px;
-  background-color: Black;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
 .calculator{
@@ -17,16 +21,17 @@ body{
 }
 
 .input-content{
-  width: 100%;
+  width: fit-content;
   height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: start;
+  align-items: baseline;
 }
 
-.text-margin-0{
+/*.text-margin-0{
   margin: 0;
-}
+}*/
 
 .input-cont-child{
   margin:10px;
@@ -35,8 +40,12 @@ body{
   justify-content: space-between;
 }
 
-.equal-sign{
+select option[data-default] {
+  color: #888;
+}
+
+/*.equal-sign{
   display: flex;
   align-items: flex-end;
-  justify-content: center;
-}
+  justify-content: flex-end;
+}*/

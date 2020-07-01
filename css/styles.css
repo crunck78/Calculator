@@ -1,5 +1,5 @@
-body{
-  margin: 16px;
+body {
+  /*margin: 16px;*/
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@ body{
   align-items: center;
 }
 
-.calculator{
+.calculator {
   /*position: relative;*/
   color: green;
   width: 700px;
@@ -36,13 +36,13 @@ body{
   right: 0;
 }*/
 
-.calculator h1{
+.calculator h1 {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
   text-decoration: underline;
 }
 
-.input-content{
+.input-content {
   width: 100%;
   height: fit-content;
   display: flex;
@@ -51,7 +51,7 @@ body{
   align-items: baseline;
 }
 
-.result-content{
+.result-content {
   font-family: 'Orbitron', sans-serif;
   font-weight: 600;
 }
@@ -60,11 +60,11 @@ body{
   margin: 0;
 }*/
 
-.input-cont-child{
-  margin:10px;
-  display: flex;
+.input-cont-child {
+  margin: 10px;
+  /*display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between;*/
 }
 
 select option[data-default] {
@@ -76,3 +76,32 @@ select option[data-default] {
   align-items: flex-end;
   justify-content: flex-end;
 }*/
+
+@media(max-width: 800px) {
+  .calculator {
+    width: 80%;
+    min-width: 0;
+    overflow: scroll;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 5px;
+    border: 5px solid Gray;
+  }
+
+  .calculator h1 {
+    text-align: start;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: underline;
+  }
+
+  .input-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*align-items: baseline;*/
+  }
+}

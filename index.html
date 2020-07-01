@@ -4,43 +4,48 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CALCULATOR</title>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 	<!--<script type="text/javascript" src="js/scripts.js"></script>-->
 	<script src="js/scripts.js"></script>
 </head>
 
 <body>
+
+	<!--Bild von <a href="https://pixabay.com/de/users/TheDigitalArtist-202249/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4009714">Pete Linforth</a> auf <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4009714">Pixabay</a>"-->
 	<div class="calculator">
-		<h1>Calculator</h1>
-		<div class="input-content">
-			<div class="input-left input-cont-child">
-				<!--<p class="text-margin-0" >Enter first number:</p>-->
-				<input id="number1" type="number" placeholder="Enter first number:"/>
-			</div>
-			<div class="select-signs input-cont-child">
-				<!--<p class="text-margin-0" >Select operation sign:</p>-->
-				<select id="operation-signs" name="operation-signs" required="">
-					<option value="" disabled="" selected="">Select operation sign:</option>
-					<option value="+">+</option>
-					<option value="-">-</option>
-					<option value="*">*</option>
-					<option value="/">/</option>
-				</select>
-			</div>
-			<div class="input-right input-cont-child">
-				<!--<p class="text-margin-0">Enter second number:</p>-->
-				<input id="number2" type="number" placeholder="Enter second number:"/>
-			</div>
-			<!--<div class="equal-sign input-cont-child">
+		<!--<img src="img/matrix-4009714_640.jpg" alt="matrix-image" class="calculator-img">-->
+		<div class="calculator-content">
+			<h1>Calculator</h1>
+			<div class="input-content">
+				<div class="input-left input-cont-child">
+					<!--<p class="text-margin-0" >Enter first number:</p>-->
+					<input id="number1" type="number" placeholder="Enter first number:" />
+				</div>
+				<div class="select-signs input-cont-child">
+					<!--<p class="text-margin-0" >Select operation sign:</p>-->
+					<select id="operation-signs" name="operation-signs" required="">
+						<option value="" disabled="" selected="">Select operation sign:</option>
+						<option value="+">+</option>
+						<option value="-">-</option>
+						<option value="*">*</option>
+						<option value="/">/</option>
+					</select>
+				</div>
+				<div class="input-right input-cont-child">
+					<!--<p class="text-margin-0">Enter second number:</p>-->
+					<input id="number2" type="number" placeholder="Enter second number:" />
+				</div>
+				<!--<div class="equal-sign input-cont-child">
 				=
 			</div>-->
-			<button class="input-cont-child" onclick="getResult()">Get Result</button>
-		</div>
+				<button class="input-cont-child" onclick="getResult()">Get Result</button>
+			</div>
 
-		<div>
-			Result: <span id="result"></span>
+			<div class="result-content">
+				Result: <span id="result"></span>
+			</div>
 		</div>
-
 	</div>
 
 </body>

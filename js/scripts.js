@@ -2,9 +2,10 @@ function getResult() {
     var num1 = +document.getElementById("number1").value;
     var operationSign = document.getElementById("operation-signs").value;
     var num2 = +document.getElementById("number2").value;
-    var sum = calculate(num1, operationSign, num2);
+    var result = calculate(num1, operationSign, num2);
     //var resultText = num1 +" "+ operationSign +" "+ num2 +" = "+ sum;
-    alert(sum);
+    document.getElementById('result').innerHTML = '<b>' + result + '</b>';
+    // alert(sum);
 }
 
 function calculate(num1, operationSign, num2){

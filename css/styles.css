@@ -10,7 +10,9 @@ body{
 .calculator{
   /*position: relative;*/
   color: green;
-  width: 900px;
+  width: 700px;
+  min-width: 700px;
+  overflow: hidden;
   height: fit-content;
   background-color: gainsboro;
   display: flex;

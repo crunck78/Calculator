@@ -1,3 +1,11 @@
+const OPERATIONS = {
+    plus: '+',
+    minus: '-',
+    product: '*',
+    division: '/'
+};
+Object.freeze(OPERATIONS);
+
 function getResult() {
     var num1 = +document.getElementById("number1").value;
     var operationSign = document.getElementById("operation-signs").value;
@@ -11,13 +19,13 @@ function getResult() {
 function calculate(num1, operationSign, num2){
     switch(operationSign)
     {
-        case '+':
+        case OPERATIONS.plus:
             return sum(num1, num2);
-        case '-':
+        case OPERATIONS.minus:
             return diff(num1, num2);
-        case '*':
+        case OPERATIONS.product:
             return mult(num1, num2);
-        case '/':
+        case OPERATIONS.division:
             return div(num1, num2);
         default: 
             return "PLEASE SELECT AN OPERATION SIGN!";

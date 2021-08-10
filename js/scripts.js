@@ -28,7 +28,7 @@ function calculate(num1, operationSign, num2){
         case OPERATIONS.division:
             return div(num1, num2);
         default: 
-            areturn "PLEASE SELECT AN OPERATION SIGN!";
+            return "PLEASE SELECT AN OPERATION SIGN!";
     }
 }
 

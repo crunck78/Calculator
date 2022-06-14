@@ -81,7 +81,7 @@ select option[data-default] {
   .calculator {
     width: 80%;
     min-width: 0;
-    overflow: scroll;
+    overflow: auto;
     height: fit-content;
     display: flex;
     flex-direction: column;

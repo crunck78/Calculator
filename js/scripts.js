@@ -1,35 +1,11 @@
-const OPERATIONS = {
-    plus: '+',
-    minus: '-',
-    product: '*',
-    division: '/'
-};
-Object.freeze(OPERATIONS);
+const operationSignMap = new Map();
+operationSignMap.set('+', sum);
+operationSignMap.set('-', diff);
+operationSignMap.set('*', mult);
+operationSignMap.set('/', div);
 
-function getResult() {
-    var num1 = +document.getElementById("number1").value;
-    var operationSign = document.getElementById("operation-signs").value;
-    var num2 = +document.getElementById("number2").value;
-    var result = calculate(num1, operationSign, num2);
-    //var resultText = num1 +" "+ operationSign +" "+ num2 +" = "+ sum;
+function showResult(result){
     document.getElementById('result').innerHTML = '<b>' + result + '</b>';
-    // alert(sum);
-}
-
-function calculate(num1, operationSign, num2){
-    switch(operationSign)
-    {
-        case OPERATIONS.plus:
-            return sum(num1, num2);
-        case OPERATIONS.minus:
-            return diff(num1, num2);
-        case OPERATIONS.product:
-            return mult(num1, num2);
-        case OPERATIONS.division:
-            return div(num1, num2);
-        default: 
-            return "PLEASE SELECT AN OPERATION SIGN!";
-    }
 }
 
 function sum(num1, num2){
@@ -46,6 +22,30 @@ function mult(num1, num2){
 
 function div(num1, num2){
     if(num2 === 0)
-        return "UNDEFINDE!";
+        return "UNDEFINED!";
     return num1 / num2;
+}
+
+function handleGetResult() {
+    const {num1, operationSign, num2} = getInputs();
+    const result = calculate(num1, operationSign, num2);
+    showResult(result);
+}
+
+function getInputs(){
+    const num1 = +document.getElementById("number1").value;
+    const operationSign = document.getElementById("operation-signs").value;
+    const num2 = +document.getElementById("number2").value;
+
+    return {num1, operationSign, num2};
+}
+
+function calculate(num1, operationSign, num2){
+    try{
+        const operation = operationSignMap.get(operationSign);
+        const result = operation(num1, num2);
+        return result;
+    }catch(err){
+        return "Please select operation sign!";
+    }
 }
